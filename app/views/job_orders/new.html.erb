@@ -1,0 +1,28 @@
+<h1>New Job Order Form<h1>
+
+
+<br>
+<%= form_with url: joborders_path do |form| %>
+
+    <div class ="field">
+    <%= form.label :service %>
+<%= select_tag(:service, options_for_select([["INSTITUTIONAL"],["HOSPITAL"],["ACADEMICS"],["RESEARCH"],["MISSION"],["GENERAL SERVICES"]])) %>
+    </div>
+
+    <div class ="field">
+    <%= form.label :department %>
+    <%= form.text_field :department %>
+    </div>
+
+    <div class ="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+    </div>
+    
+    <p>Today is <%=@date_today %></p>
+
+    <div class="actions">
+    <%= form.submit %>
+    </div>
+<% end %>
+<a href="/joborders"> Cancel </a>

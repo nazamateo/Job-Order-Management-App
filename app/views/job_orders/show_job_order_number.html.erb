@@ -1,0 +1,8 @@
+<h1>Job Order Creation Successful!</h1>
+
+<%= render "table" %>
+    <% @job_orders.each do |jo| %>
+        <a href="/joborders/service=<%= jo.service%>"> Show All Job Orders</a>
+<%end%>
+
+<a href="/joborders/new"> Create new job order</a>
